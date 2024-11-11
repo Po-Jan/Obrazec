@@ -6,11 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function validatePassword() {
         const password = document.querySelector('#password');
-        const password1 = password.value.trim(); 
-        if (/[A-Z]/.test(password1) && /[0-9]/.test(password1) && password1.length > 6) {
-            return true;
-        }
-        return false;
+        const passRegex = /^(?=(?:.*[A-Za-z]){8,})(?=.*\d)(?!.*\s)[A-Za-z\d!@#$%^&*()_+={}\[\]:;"'<>,.?/\\|`~\-]+$/;
+        return passRegex.test(password.value.trim());
     }
 
     function validatePhoneNumber(){
