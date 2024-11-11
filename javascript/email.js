@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     function validateEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const email = document.querySelector('#email');
     const emailLabel = document.querySelector('#emailLabel');
     const span = document.querySelector('#emailLabel span');
-    
+
 
     
 

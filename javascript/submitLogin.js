@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const labelPassword =document.querySelector('#labelPassword');
     const span2 = document.querySelector('#labelPassword span');
 
+
     button.addEventListener('click', function() {
         const username1 = username.value.trim();
         const password1 = password.value.trim();

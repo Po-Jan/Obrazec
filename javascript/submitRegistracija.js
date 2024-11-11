@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+
     function checkYear() {
         const day = document.querySelector('.daySpan');
         const month = document.querySelector('.monthSpan');
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         } else {
                             return true;
                         }
-                    
+
 
                     case "February":
                         if (Number(day1) > 29) {
@@ -26,10 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         } else {
                             return true;
                         }
-                    
+
                     default:
                         return true;
-                        
+
                 }
             } else {
                 switch (month1) {
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         } else {
                             return true;
                         }
-                 
+
 
                     case "April":
                     case "June":
@@ -50,8 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         } else {
                             return true;
                         }
-                        default:
-                            return true;
+                    default:
+                        return true;
                 }
             }
         }
@@ -59,11 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function validatePassword() {
         const password = document.querySelector('#password');
-        const password1 = password.value.trim();
-        if (/[A-Z]/.test(password1) && /[0-9]/.test(password1)) {
-            return true;
-        }
-        return false;
+        const passRegex = /^(?=(?:.*[A-Za-z]){8,})(?=.*\d)(?!.*\s)[A-Za-z\d!@#$%^&*()_+={}\[\]:;"'<>,.?/\\|`~\-]+$/;
+        return passRegex.test(password.value.trim());
     }
     function validatePasswordLength() {
         const password = document.querySelector('#password');
@@ -115,10 +113,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     day.textContent = 'Day';
                     month.textContent = 'Month';
                     year.textContent = 'Year';
-
                     button.disabled = true;
                     leftDiv2.classList.remove('leftDiv2JS');
                     leftDiv.classList.remove('leftDivJS');
+
                 });
 
             }
@@ -126,33 +124,33 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     document.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
-        const email1 = email.value.trim();
-        const usernamE1 = usernamE.value.trim();
-        const password1 = password.value.trim();
-        const day1 = day.textContent.trim();
-        const month1 = month.textContent.trim();
-        const year1 = year.textContent.trim();
-        if (!button.disabled) {
-            if (email1 !== "" && usernamE1 !== "" && password1 !== "" && day1 !== "Day" && month1 !== "Month" && year1 !== "Year" && checkYear() && (validatePassword() && validatePasswordLength()) && validateEmail(email1) && validateUsername()) {
-                swal("Good job!", "You have successfully registered!", "success").then(() => {
-                    email.value = '';
-                    displayNamE.value = '';
-                    usernamE.value = '';
-                    password.value = '';
-                    day.textContent = 'Day';
-                    month.textContent = 'Month';
-                    year.textContent = 'Year';
+            const email1 = email.value.trim();
+            const usernamE1 = usernamE.value.trim();
+            const password1 = password.value.trim();
+            const day1 = day.textContent.trim();
+            const month1 = month.textContent.trim();
+            const year1 = year.textContent.trim();
+            if (!button.disabled) {
+                if (email1 !== "" && usernamE1 !== "" && password1 !== "" && day1 !== "Day" && month1 !== "Month" && year1 !== "Year" && checkYear() && (validatePassword() && validatePasswordLength()) && validateEmail(email1) && validateUsername()) {
+                    swal("Good job!", "You have successfully registered!", "success").then(() => {
+                        email.value = '';
+                        displayNamE.value = '';
+                        usernamE.value = '';
+                        password.value = '';
+                        day.textContent = 'Day';
+                        month.textContent = 'Month';
+                        year.textContent = 'Year';
 
-                    button.disabled = true;
-                    leftDiv2.classList.remove('leftDiv2JS');
-                    leftDiv.classList.remove('leftDivJS');
-                });
+                        button.disabled = true;
+                        leftDiv2.classList.remove('leftDiv2JS');
+                        leftDiv.classList.remove('leftDivJS');
+                    });
 
+                }
             }
         }
-        }
     });
-   
+
 });
 
 
