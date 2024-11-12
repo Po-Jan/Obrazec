@@ -56,7 +56,43 @@
     src: url("../fonts/pisava10.woff2") format("woff2");
 }
 
+.swal-button {
+    background-color: rgb(29, 155, 240) !important;
+    outline-style:none;
+    border:none;
+}
+.swal-button:hover {
+    background-color: rgb(34, 90, 128) !important;
+}
 
+.swal-text {
+    color: oklab(0.786807 -0.0025776 -0.0110238);
+    font-size: 18px;
+    font-family: font1;
+}
+
+.swal-title{
+    font-size: 30px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    color: oklab(0.963963 -0.000228554 -0.00283051);
+    font-family: font6;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.swal-modal{
+    background-color: oklab(0.321088 -0.000220731 -0.00934622);
+}
+
+.swal-icon--success::before,.swal-icon--success::after,.swal-icon--success__hide-corners{
+    opacity: 0 !important;
+}
+
+.swal-icon--success{
+   border-color: #2B7A0B !important;
+
+}
 
 
 html,
@@ -71,7 +107,7 @@ body {
 }
 
 .background {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     z-index: -1;
@@ -179,9 +215,11 @@ label span {
     .discordLogo2{
         display: block;
     }
-
+    
     
 }
+
+
 
 
 
@@ -259,7 +297,6 @@ fieldset {
 
 
 legend {
-    height: 16px;
     font-family: font7;
     color: rgb(177, 182, 189);
     line-height: 1.3333333333333333;

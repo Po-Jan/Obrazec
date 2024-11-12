@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!button.disabled) {
             if (email1 !== "" && usernamE1 !== "" && password1 !== "" && day1 !== "Day" && month1 !== "Month" && year1 !== "Year" && checkYear() && (validatePassword() && validatePasswordLength()) && validateEmail(email1) && validateUsername()) {
                 swal("Good job!", "You have successfully registered!", "success").then(() => {
+                    
                     email.value = '';
                     displayNamE.value = '';
                     usernamE.value = '';
