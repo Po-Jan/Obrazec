@@ -3,9 +3,6 @@
     padding: 0;
 }
 
-
-
-
 @font-face {
     font-family: font1;
     src: url("../fonts/pisava1.woff2") format("woff2");
@@ -57,12 +54,14 @@
 }
 
 .swal-button {
-    background-color: rgb(29, 155, 240) !important;
+    background-color: hsl(235 calc(1 * 85.6%) 64.7% / 1) !important;
     outline-style:none;
     border:none;
+    opacity: 0.9;
+    
 }
 .swal-button:hover {
-    background-color: rgb(34, 90, 128) !important;
+    opacity: 1;
 }
 
 .swal-text {
@@ -83,6 +82,7 @@
 
 .swal-modal{
     background-color: oklab(0.321088 -0.000220731 -0.00934622);
+
 }
 
 .swal-icon--success::before,.swal-icon--success::after,.swal-icon--success__hide-corners{
@@ -592,6 +592,7 @@ legend span {
     font-family: font6;
     font-weight: 500;
     cursor: pointer;
+ 
 }
 
 .continueButton {

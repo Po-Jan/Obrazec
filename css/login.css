@@ -57,12 +57,15 @@
 
 
 .swal-button {
-    background-color: rgb(29, 155, 240) !important;
+    background-color: hsl(235 calc(1 * 85.6%) 64.7% / 1) !important;
     outline-style:none;
     border:none;
+    opacity: 0.9;
+   
 }
 .swal-button:hover {
-    background-color: rgb(34, 90, 128) !important;
+    opacity: 1;
+   
 }
 
 .swal-text {
@@ -83,6 +86,8 @@
 
 .swal-modal{
     background-color: oklab(0.321088 -0.000220731 -0.00934622);
+    border: 1px solid white;
+    
 }
 
 .swal-icon--success::before,.swal-icon--success::after,.swal-icon--success__hide-corners{
@@ -439,24 +444,9 @@ label span {
 
 
 
-.qrDiv {
-    height: 176px;
-    width: 176px;
-    margin-bottom: 32px;
-    display: flex;
-    position: relative;
-    
-}
 
 
-.border {
-    padding: 8px;
-    border-radius: 4px;
-    width: 160px;
-    height: 160px;
-    background-color: rgb(255, 255, 255);
-    
-}
+
 
 
 
@@ -538,4 +528,34 @@ label span {
     text-transform: none;
     font-family: font5;
     letter-spacing: .02em;
+}
+
+
+
+.qrDiv {
+    height: 176px;
+    width: 176px;
+    margin-bottom: 32px;
+    
+}
+
+.border {
+    padding: 8px;
+    border-radius: 4px;
+    width: 160px;
+    height: 160px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.face{  
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin: 63px;
+    z-index: 2;
+    cursor: pointer;
 }

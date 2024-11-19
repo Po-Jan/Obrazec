@@ -1,7 +1,6 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     function validateEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
         return emailRegex.test(email);
     }
 
@@ -18,17 +17,17 @@ document.addEventListener('DOMContentLoaded', function() {
     button.addEventListener('click', function() {
         const email1 = email.value.trim();
         if (!button.disabled) {
-            if (email1 !== ""&&validateEmail(email1)) {
+            if (email1 === "") {
+                emailLabel.classList.add("redText"); 
+                span.textContent=" - Required";
+                span.classList.add('redSpan');
+            }else if(email1 !== "" && (validateEmail(email1))){
                 emailLabel.classList.remove("redText");
                 span.textContent="*"; 
                 span.classList.remove('redSpan');
-            }else if(email1 === ""){
+            }else if (email1 !== "" && (validateEmail(email1) !== true)) {
                 emailLabel.classList.add("redText");
-                span.textContent=" - Required";
-                span.classList.add('redSpan');
-            }else{
-                emailLabel.classList.add("redText");
-                span.textContent=" - Not a valid email";
+                span.textContent = " - Not a valid email";
                 span.classList.add('redSpan');
             }
         }
@@ -41,10 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
             emailLabel.classList.add("redText"); 
             span.textContent=" - Required";
             span.classList.add('redSpan');
-        }else{
+        }else if(email1 !== "" && (validateEmail(email1))){
             emailLabel.classList.remove("redText");
             span.textContent="*"; 
             span.classList.remove('redSpan');
+        }else if (email1 !== "" && (validateEmail(email1) !== true)) {
+            emailLabel.classList.add("redText");
+            span.textContent = " - Not a valid email";
+            span.classList.add('redSpan');
         }
         
     });
@@ -53,17 +56,17 @@ document.addEventListener('DOMContentLoaded', function() {
         if (event.key === "Enter") {
             const email1 = email.value.trim();
             if (!button.disabled) {
-                if (email1 !== ""&&validateEmail(email1)) {
+                if (email1 === "") {
+                    emailLabel.classList.add("redText"); 
+                    span.textContent=" - Required";
+                    span.classList.add('redSpan');
+                }else if(email1 !== "" && (validateEmail(email1))){
                     emailLabel.classList.remove("redText");
                     span.textContent="*"; 
                     span.classList.remove('redSpan');
-                }else if(email1 === ""){
+                }else if (email1 !== "" && (validateEmail(email1) !== true)) {
                     emailLabel.classList.add("redText");
-                    span.textContent=" - Required";
-                    span.classList.add('redSpan');
-                }else{
-                    emailLabel.classList.add("redText");
-                    span.textContent=" - Not a valid email";
+                    span.textContent = " - Not a valid email";
                     span.classList.add('redSpan');
                 }
             }

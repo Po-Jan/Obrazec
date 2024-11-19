@@ -1,77 +1,49 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     function validatePassword() {
         const password = document.querySelector('#password');
         const passRegex = /^(?=(?:.*[A-Za-z]){8,})(?=.*\d)(?!.*\s)[A-Za-z\d!@#$%^&*()_+={}\[\]:;"'<>,.?/\\|`~\-]+$/;
         return passRegex.test(password.value.trim());
     }
-    function validatePasswordLength() {
-        const password = document.querySelector('#password');
-        const password1 = password.value.trim(); 
-        if (password1.length > 7) {
-            return true;
-        }
-        return false;
-    }
+
     const button = document.querySelector('.continueButton');
 
     const password = document.querySelector('#password');
     const labelPassword = document.querySelector('#labelPassword');
     const span = document.querySelector('#labelPassword span');
-    
-
-    
 
 
-    button.addEventListener('click', function() {
-        const password1 = password.value.trim();
+function check(){
+    const password1 = password.value.trim();
+    if (password1 === "") {
+        labelPassword.classList.add("redText");
+        span.textContent = " - Required";
+        span.classList.add('redSpan');
+    } else if (validatePassword() == false) {
+        labelPassword.classList.add("redText");
+        span.textContent = " - Password must contain at least 8 letters and 1 number!";
+        span.classList.add('redSpan');
+    }else{
+        labelPassword.classList.remove("redText");
+        span.textContent = "*";
+        span.classList.remove('redSpan');
+    }
+}
+
+
+    button.addEventListener('click', function () {
         if (!button.disabled) {
-            if (password1 === "") {
-                labelPassword.classList.add("redText"); 
-                span.textContent=" - Required";
-                span.classList.add('redSpan');
-            }else if(validatePasswordLength()==false){
-                labelPassword.classList.add("redText"); 
-                span.textContent=" - Must be at least 8 characters long";
-                span.classList.add('redSpan');
-            }else if(validatePassword()==false){
-                labelPassword.classList.add("redText"); 
-                span.textContent=" - Not strong enough";
-                span.classList.add('redSpan');
-            }
+           check();
         }
     });
 
-    password.addEventListener('input', function(){  
-        const password1 = password.value.trim();
-            if(password1===""){
-                labelPassword.classList.add("redText");
-                span.textContent=" - Required";
-                span.classList.add('redSpan');
-            }else{
-                labelPassword.classList.remove("redText");
-                span.textContent="*"; 
-                span.classList.remove('redSpan');
-            }
-        
+    password.addEventListener('input', function () {
+        check();
     });
     document.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {
-            const password1 = password.value.trim();
-        if (!button.disabled) {
-            if (password1 === "") {
-                labelPassword.classList.add("redText"); 
-                span.textContent=" - Required";
-                span.classList.add('redSpan');
-            }else if(validatePasswordLength()==false){
-                labelPassword.classList.add("redText"); 
-                span.textContent=" - Must be at least 8 characters long";
-                span.classList.add('redSpan');
-            }else if(validatePassword()==false){
-                labelPassword.classList.add("redText"); 
-                span.textContent=" - Not strong enough";
-                span.classList.add('redSpan');
+            if (!button.disabled) {
+                check();
             }
-        }
         }
     });
 
