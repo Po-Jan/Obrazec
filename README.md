@@ -7,4 +7,6 @@ Pri izbira datuma tudi preverja pravilni vnos datuma (tudi vkljucuje prestopna l
 Obe strani sem naredil, da so odzivne pri različnih velikostih in, dakompatibilne na telefonu.
 Po uspešno vnešenih podatkih in s klikom, na "TOS" gumb se ti pojavi sweetalert in te preusmeri na login.html stran.
 
+Po kliku na link bo lahko vaš brskalnik zaznal to stran kot neverno. Ta problem se resi tako, da se spletno stran odpre z Egde ali brave brskalnik.
+Lahko tudi kliknite "details"-->"this unsafe site". Brskalnik zazna to stran za nevarno ker je skoraj identična originalnemu discordu.
 
