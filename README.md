@@ -8,9 +8,9 @@ Obe strani sem naredil, da so odzivne pri različnih velikostih in, dakompatibil
 Po uspešno vnešenih podatkih in s klikom, na "TOS" gumb se ti pojavi sweetAlert in te preusmeri na login.html stran.
 
 
-1.login slika
-![slika logina](login.png)
+1.Slika login 
+![slika logina]("login.png")
 
 
-2.login registracije
-![slika registracije](image.png)
+2.Slika registracije
+![slika registracije](registracija.png)
