@@ -9,8 +9,8 @@ Po uspešno vnešenih podatkih in s klikom, na "TOS" gumb se ti pojavi sweetAler
 
 
 1.Slika login 
-![slika logina]("login.png")
+![slika logina](img/login.PNG)
 
 
 2.Slika registracije
-![slika registracije](registracija.png)
+![slika registracije](img/registracija.PNG)
