@@ -87,8 +87,6 @@
 
 .swal-modal{
     background-color: oklab(0.321088 -0.000220731 -0.00934622);
-    border: 1px solid white;
-    
 }
 
 .swal-icon--success::before,.swal-icon--success::after,.swal-icon--success__hide-corners{
