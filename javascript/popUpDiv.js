@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const displayName= document.querySelector('#displayName');
     const textDisplayName=document.querySelector('.textDisplayName');
     
-   
+
     displayName.addEventListener('click',function(){
         event.stopPropagation();
         textDisplayName.classList.add('displayBlock'); 
@@ -10,13 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         textUsername.classList.remove('displayBlock');
         textUsername.classList.remove('expand'); 
     });
-    displayName.addEventListener('focusin',function(){
-        event.stopPropagation();
-        textDisplayName.classList.add('displayBlock'); 
-        textDisplayName.classList.add('expand');
-        textUsername.classList.remove('displayBlock');
-        textUsername.classList.remove('expand'); 
-    });
+
 
 
     const username=document.querySelector('#username');
@@ -31,14 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
     });
 
-    username.addEventListener('focusin',function(){
-        event.stopPropagation();
-        textUsername.classList.add('displayBlock'); 
-        textUsername.classList.add('expand'); 
-        textDisplayName.classList.remove('displayBlock');
-        textDisplayName.classList.remove('expand'); 
-        
-    });
+
 
     document.addEventListener('click',function(){
         textUsername.classList.remove('displayBlock');
@@ -47,10 +34,5 @@ document.addEventListener('DOMContentLoaded', function() {
         textDisplayName.classList.remove('expand');
     });
 
-    document.addEventListener('focusin',function(){
-        textUsername.classList.remove('displayBlock');
-        textUsername.classList.remove('expand'); 
-        textDisplayName.classList.remove('displayBlock');
-        textDisplayName.classList.remove('expand');
-    });
+
 });
