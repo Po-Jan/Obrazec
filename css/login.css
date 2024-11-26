@@ -478,6 +478,11 @@ label span {
     font-weight: 600;
     font-family: font6;
 }
+.QRSlika{
+    width: 120%;
+    height: 120%;
+    border-radius: 3px;
+}
 
 
 
@@ -555,6 +560,16 @@ label span {
     height: 50px;
     position: absolute;
     margin: 63px;
+    z-index: 2;
+  
+}
+.innerFace{
+    height: 4px;
+    width: 4px;
+    background-color: black;
+    border-radius: 10px;
+    position: absolute;
+    margin: 66px 64px 64px 55px;
     z-index: 2;
     cursor: pointer;
 }
