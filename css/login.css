@@ -561,15 +561,16 @@ label span {
     position: absolute;
     margin: 63px;
     z-index: 2;
-  
+
 }
+
 .innerFace{
-    height: 4px;
     width: 4px;
+    height: 4px;
+    position: absolute;
+    margin: 66px 63px 64px 55px;
     background-color: black;
     border-radius: 10px;
-    position: absolute;
-    margin: 66px 64px 64px 55px;
     z-index: 2;
     cursor: pointer;
 }
