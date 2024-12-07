@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     const button = document.querySelector('.continueButton');
-
+    const input = document.querySelector('#password');
     const email = document.querySelector('#email');
     const displayNamE = document.querySelector('#displayNamE');
     const usernamE = document.querySelector('#usernamE');
@@ -87,7 +87,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const leftDiv = document.querySelector('.leftDiv');
     const leftDiv2 = document.querySelector('.leftDiv2');
 
-    function check(){
+    const path1 = document.querySelector('.path1');
+    const path2 = document.querySelector('.path2');
+
+    function check() {
         const email1 = email.value.trim();
         const usernamE1 = usernamE.value.trim();
         const password1 = password.value.trim();
@@ -97,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!button.disabled) {
             if (email1 !== "" && usernamE1 !== "" && password1 !== "" && day1 !== "Day" && month1 !== "Month" && year1 !== "Year" && checkYear() && validatePassword() && validateEmail(email1) && validateUsername()) {
                 swal("Good job!", "You have successfully registered!", "success").then(() => {
-                    
+
                     email.value = '';
                     displayNamE.value = '';
                     usernamE.value = '';
@@ -106,18 +109,23 @@ document.addEventListener('DOMContentLoaded', function () {
                     month.textContent = 'Month';
                     year.textContent = 'Year';
                     button.disabled = true;
+                    path2.classList.add('displayBlock');
+                    path1.classList.remove('displayBlock');
+                    path1.classList.add('displayNone');
+                    path2.classList.remove('displayNone');
+                    input.type = "password";
                     leftDiv2.classList.remove('leftDiv2JS');
                     leftDiv.classList.remove('leftDivJS');
-                    setTimeout(function() {
-                        window.location.href = 'index.html';  
-                    }, 2000);
+                    setTimeout(function () {
+                        window.location.href = 'index.html';
+                    }, 1000);
                 });
 
             }
         }
     }
     button.addEventListener('click', function () {
-       check();
+        check();
     });
     document.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {

@@ -842,12 +842,12 @@ legend span {
 
 
 .path1{
-    
     fill: #b3b3b3;
+ 
 }
 .path2{
-    display: none;
     fill: #b3b3b3;
+    display: block;
 }
 
 .svgEye:hover{
