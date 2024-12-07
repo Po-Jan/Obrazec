@@ -259,6 +259,7 @@ label span {
     height: 40px;
     background-color: rgb(30, 31, 34);
     border-radius: 3px;
+    position: relative;
 }
 
 .input4 {
@@ -807,9 +808,7 @@ legend span {
     transition: padding 0.3s ease;
 }
 
-.displayBlock{
-    display: block;
-}
+
 
 
 
@@ -824,4 +823,40 @@ legend span {
     text-transform: none;
     font-family: font5;
     letter-spacing: .02em;
+}
+.svgDiv{
+    height: 24px;
+    width: 24px;
+    margin: 8px 0 0 91%;
+    position: absolute;
+}
+
+.svgEye{
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+ 
+}
+
+
+.path1{
+    
+    fill: #b3b3b3;
+}
+.path2{
+    display: none;
+    fill: #b3b3b3;
+}
+
+.svgEye:hover{
+    cursor: pointer;
+}
+
+.displayBlock{
+    display: block;
+}
+.displayNone{
+    display: none;
 }
